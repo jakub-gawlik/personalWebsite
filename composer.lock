@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "859863f5ca81e4a2e3cf62f862513073",
+    "content-hash": "9851cc5bcb932e4a52579d1166afb55a",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -119,6 +119,69 @@
                 }
             ],
             "time": "2026-06-14T18:21:03+00:00"
+        },
+        {
+            "name": "caasidev/laravel-gallery",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caasidev/laravel-gallery.git",
+                "reference": "13d71495cab3d41628d8efdf315aef85a08e3d5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caasidev/laravel-gallery/zipball/13d71495cab3d41628d8efdf315aef85a08e3d5a",
+                "reference": "13d71495cab3d41628d8efdf315aef85a08e3d5a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^13.0",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.10",
+                "laravel/pint": "^1.24",
+                "orchestra/testbench": "^11.0",
+                "pestphp/pest": "^4.0",
+                "pestphp/pest-plugin-laravel": "^4.0",
+                "phpstan/phpstan": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Caasidev\\LaravelGallery\\GalleryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Caasidev\\LaravelGallery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caasi Dev",
+                    "email": "dev@caasi.dev"
+                }
+            ],
+            "description": "A plugin-like image gallery package for Laravel applications.",
+            "keywords": [
+                "gallery",
+                "images",
+                "laravel",
+                "media",
+                "package"
+            ],
+            "support": {
+                "issues": "https://github.com/caasidev/laravel-gallery/issues",
+                "source": "https://github.com/caasidev/laravel-gallery/tree/1.0"
+            },
+            "time": "2026-08-21T19:01:23+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
