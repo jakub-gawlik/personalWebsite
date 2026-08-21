@@ -22,6 +22,23 @@ test('users can authenticate using the login screen', function () {
     $response->assertRedirect(route('dashboard', absolute: false));
 });
 
+test('users are remembered when remember me is checked', function () {
+    $user = User::factory()->create();
+
+    $this->post(route('login.store'), [
+        'email' => $user->email,
+        'password' => 'password',
+        'remember' => 'on',
+    ]);
+
+    $this->assertAuthenticated();
+    $this->assertTrue(
+        request()->cookie('remember_web') !== null ||
+            $user->fresh()->remember_token !== null,
+        'Expected a remember token or remember cookie to be set.'
+    );
+});
+
 test('users with two factor enabled are redirected to two factor challenge', function () {
     $this->skipUnlessFortifyHas(Features::twoFactorAuthentication());
 
